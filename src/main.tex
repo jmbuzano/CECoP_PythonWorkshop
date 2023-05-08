@@ -39,7 +39,7 @@ In order to have the files as part of the devcloud, the following steps will be 
             \label{fig:import_0}
         \end{figure}
     }
-
+\newpage
     \item {
         Select ``New Folder" option as presented in Figure \ref{fig:import_1}.
         \begin{figure}[h]
@@ -64,21 +64,58 @@ In order to have the files as part of the devcloud, the following steps will be 
     \item Open the files by double clicking over its name.
 \end{enumerate}
 
-\newpage
-
 \section{VS Code Setup}
 \label{sec:vs_code}
 % \lstinputlisting[language=C++]{assets/test.cpp}
 
 Visual Studio Code supports working with Jupyter Notebooks natively, and through Python code files. To work with Python in Jupyter Notebooks, you must activate an Anaconda environment in VS Code, or another Python environment in which you've installed the Jupyter package. 
 
-\subsection{Automatically setting up your environment}
+\subsection{Environment setup}
 
-VS Code can handle the installation of those packages automatically. Once you request to create a new file and it does not know how to deal with it, it will suggest to install what is required to execute that specific file extension. In Figure \ref{fig:new_file_0} you will see where to create a new file.
+\subsubsection{Automatically setting up your environment}
+\label{sub:auto}
+
+VS Code can handle the installation of those packages automatically. There are several ways for it to suggest what to install, let's find the extension in the market place. In order to find the market, please click on Extensions, Figure \ref{fig:extensions} shows where it is.
 
 \begin{figure}[h]
  \centering 
-    \includegraphics[width=11cm]{assets/vs_code_new_file.JPG}
+    \includegraphics[width=8cm, height=4.5cm]{assets/vs_code_extensions.JPG}
+    \caption{VS Code Extensions}
+    \label{fig:extensions}
+\end{figure}
+
+Then, the market place will be displayed for you to install the extension. Figure \ref{fig:market} has a view of the market.
+
+\begin{figure}[h]
+ \centering 
+    \includegraphics[width=8cm, height=4.5cm]{assets/vs_code_market_place.JPG}
+    \caption{VS Code Market}
+    \label{fig:market}
+\end{figure}
+
+It is required for us to look for the extension so let's type ``Jup". See Figure \ref{fig:market_jupyter} as a reference.
+
+\begin{figure}[h]
+ \centering 
+    \includegraphics[width=8cm, height=4.5cm]{assets/vs_code_market_place_jupyter.JPG}
+    \caption{VS Code Market: Jupyter}
+    \label{fig:market_jupyter}
+\end{figure}
+
+Proceed to install the Jupyter's extension, once completed, it will look just like Figure \ref{fig:jup_installed}.
+
+\begin{figure}[h]
+ \centering 
+    \includegraphics[width=10cm]{assets/vs_code_jupyter_installed.JPG}
+    \caption{Jupyter Installed}
+    \label{fig:jup_installed}
+\end{figure}
+
+Just to double check the kernels (Jupyter and Python), let's create and empty Jupyter file. In Figure \ref{fig:new_file_0} you'll be able to see where to find it.
+
+\begin{figure}[h]
+ \centering 
+    \includegraphics[width=10cm]{assets/vs_code_new_file_1.JPG}
     \caption{Creating a new file}
     \label{fig:new_file_0}
 \end{figure}
@@ -89,48 +126,43 @@ Then you will require to select the file extension for VS Code to trigger the au
 
 \begin{figure}[h]
  \centering 
-    \includegraphics[width=11cm]{assets/vs_code_jupyter_notebook.JPG}
+    \includegraphics[width=10cm]{assets/vs_code_jupyter_notebook.JPG}
     \caption{Picking the file extension}
     \label{fig:new_file_1}
 \end{figure}
 
-
-As soon as you click on the type, an empty file will be created such as the one presented in Figure \ref{fig:new_file_2}.
+As soon as you click on the type, an empty file will be created such as the one presented in Figure \ref{fig:new_file_2}. Selecting a Kernel is required for your files to be able to be executed.
 
 \begin{figure}[h]
  \centering 
-    \includegraphics[width=11cm]{assets/vs_code_empty_file.JPG}
-    \caption{Empty file created}
+    \includegraphics[width=10cm]{assets/vs_code_select_kernel.JPG}
+    \caption{Empty file created, Select Kernel enabled}
     \label{fig:new_file_2}
 \end{figure}
 
-There are a couple places where to execute the file, but whenever you hit the play button in a similar fashion than in Figure \ref{fig:new_file_3}.a, VS Code will automatically try to execute the code, if it does not have an interpreter an the required packages, it will suggest you to proceed with the installations as in Figure \ref{fig:new_file_3}.b.
+For VS Code to help you to look for the required packages, once you hit the ``Select Kernel" button in Figure \ref{fig:new_file_2}, the view presented in Figure \ref{fig:new_file_3} is shown for you to pick the right extension.
 
 \begin{figure}[h]
- \centering
- \begin{minipage}{12cm}
-        (a)
-        \centering
-        \includegraphics[width=11cm]{assets/vs_code_empty_file_run_button.JPG}
- \end{minipage}
- \begin{minipage}{12cm}
-    (b)
-    \centering
-        \includegraphics[width=11cm]{assets/vs_code_empty_file_run_button_hit.JPG}
- \end{minipage}
- \caption{Play button on a new file}
- \label{fig:new_file_3}
+ \centering 
+    \includegraphics[width=10cm]{assets/vs_code_suggested_extensions.JPG}
+    \caption{VS Code Market suggestions}
+    \label{fig:new_file_3}
 \end{figure}
-\newpage
-\subsection{Manual installation/setup}
 
+\newpage
+
+Once you have Python and Jupyter set, it will be able to execute the files.
+
+
+\subsubsection{Manual installation/setup}
+\label{sub:manual}
 To select an environment, use the Python: Select Interpreter command from the Command Palette (\textcolor{cyan}{Ctrl+Shift+P}). Once the appropriate environment is activated, you can create and open a Jupyter Notebook, connect to a remote Jupyter server for running code cells, and export a Jupyter Notebook as a Python file.
 
 In case you want to have a better understanding on how this is managed, please visit \href{https://code.visualstudio.com/docs/datascience/jupyter-notebooks}{Jupyter Notebooks in VS Code}.
 
 \subsection{Importing the files into VS Code}
 
-Having the files placed into VS Code is quite simple, please follow these steps:
+It does not matter if you selected the automatic (\ref{sub:auto}) or the manual (\ref{sub:manual}) setup, you will require to do an import. Having the files placed into VS Code is quite simple, please follow these steps:
 
 \begin{enumerate}
     \item Unzip the .ipynb files provided for this workshop in a known location.
